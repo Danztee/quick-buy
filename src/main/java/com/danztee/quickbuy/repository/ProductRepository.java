@@ -21,6 +21,6 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
     static List<Product> findByBrandAndName(String brand, String name) {
     }
 
-    static Long countByBrandAndName(String brand, String name) {
+    static List<Product>  countByBrandAndName(String brand, String name) {
     }
 }

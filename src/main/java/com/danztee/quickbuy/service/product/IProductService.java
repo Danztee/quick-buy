@@ -1,14 +1,16 @@
 package com.danztee.quickbuy.service.product;
 
 import com.danztee.quickbuy.model.Product;
+import com.danztee.quickbuy.request.AddProductRequest;
+import com.danztee.quickbuy.request.ProductUpdateRequest;
 
 import java.util.List;
 
 public interface IProductService {
-    Product addProduct(Product product);
+    Product addProduct(AddProductRequest product);
     List<Product> getAllProducts();
     Product getProductById(Long id);
-    Product updateProduct(Product product, Long productId);
+    Product updateProduct(ProductUpdateRequest product, Long productId);
     void deleteProduct(Long id);
     List<Product> getProductsByCategory(String category);
     List<Product> getProductsByBrand(String brand);
